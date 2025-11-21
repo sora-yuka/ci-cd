@@ -1,8 +1,7 @@
 name: Manual Build Workflow
 run-name: ${{ github.actor }} is learning workflows manually
 
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
@@ -10,4 +9,4 @@ jobs:
     
     steps:
       - name: Checkout code
-        run: actions/checkout@v5
+        uses: actions/checkout@v5
